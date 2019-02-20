@@ -1,10 +1,10 @@
-bot_token = 'NTQ3NTIxOTg2NTE1OTU5ODE4.D03_vA.-VYb0mdEi4nkaP2C3YP4FC8PUws'
+bot_token = 'YOUR BOT TOKEN'
 
 bot_description = 'Kudah-tah-tah'
 
-bot_client_id = '547521986515959818'
+bot_client_id = 'YOUR BOT ID'
 
-jail_channel_id = '547519811215949854'
+jail_channel_id = 'YOUR CHANNEL ID'
 
 game_message = 'Если в вашем сообщении есть слова "админ" и "петух", то вам засчитывается бросок банана в лицо админа.'\
                'В зависимости от количества брошеных бананов выдаются соответствующие роли :monkey_face: '
