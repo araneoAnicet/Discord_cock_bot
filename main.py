@@ -5,6 +5,7 @@ import asyncio
 from random import choice
 from time import asctime, sleep
 
+punished_users = {}
 Client = discord.Client()
 bot = commands.Bot(command_prefix='%', description=bot_description)
 
@@ -85,6 +86,14 @@ async def on_message(msg):
         ''' Message length check'''
         if len(msg.content) > 40:
             await bot.send_message(msg.channel, choice(warning_message).format(msg.author.id))
+            if msg.author.id in list(punished_users.keys()):
+                if punished_users[msg.author.id] >= 5:
+                    role = discord.utils.get(msg.server.roles, name='криминальный авторитет')
+                    jail_channel = discord.utils.get(msg.server.channels, name='обезьянник')
+                    await bot.add_roles(msg.author, role)
+                    await bot.move_member(msg.author, jail_channel)
+            else:
+                punished_users[msg.author.id] = 1
             sleep(3)
             await bot.delete_message(msg)
         ''' Repeatative content check'''
