@@ -85,7 +85,7 @@ async def on_message(msg):
         global prev_msg_content
         ''' Message length check'''
         if len(msg.content) > char_limit:
-            await bot.send_message(msg.channel, choice(warning_message).format(msg.author.id))
+            await bot.send_message(msg.channel, choice(warning_message).format(msg.author.display_name))
             if msg.author.id in list(punished_users.keys()):
                 punished_users[msg.author.id] += 1
                 if punished_users[msg.author.id] >= 5:
