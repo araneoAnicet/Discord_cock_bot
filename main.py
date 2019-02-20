@@ -84,7 +84,7 @@ async def on_message(msg):
     if msg.author.id != bot_client_id and msg.channel.id != jail_channel_id:
         global prev_msg_content
         ''' Message length check'''
-        if len(msg.content) > 40:
+        if len(msg.content) > char_limit:
             await bot.send_message(msg.channel, choice(warning_message).format(msg.author.id))
             if msg.author.id in list(punished_users.keys()):
                 punished_users[msg.author.id] += 1
