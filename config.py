@@ -1,10 +1,12 @@
 bot_token = 'YOUR BOT TOKEN'
 
-bot_description = 'Kudah-tah-tah'
-
 bot_client_id = 'YOUR BOT ID'
 
 jail_channel_id = 'YOUR CHANNEL ID'
+
+char_limit = 80
+
+bot_description = 'Kudah-tah-tah'
 
 game_message = 'Если в вашем сообщении есть слова "админ" и "петух", то вам засчитывается бросок банана в лицо админа.'\
                'В зависимости от количества брошеных бананов выдаются соответствующие роли :monkey_face: '
