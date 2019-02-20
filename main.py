@@ -72,8 +72,8 @@ async def on_message(msg):
                     else:
                         ending = 'ов'
                     await bot.send_message(
-                        msg.channel, '@{}, ты кинул {} банан{} в админа'.format(
-                            '<' + msg.author.id + '>', amount_of_bananas[:-1], ending
+                        msg.channel, '{}, ты кинул {} банан{} в админа'.format(
+                            msg.author.display_name, amount_of_bananas[:-1], ending
                         )
                     )
             else:
