@@ -87,6 +87,7 @@ async def on_message(msg):
         if len(msg.content) > 40:
             await bot.send_message(msg.channel, choice(warning_message).format(msg.author.id))
             if msg.author.id in list(punished_users.keys()):
+                punished_users[msg.author.id] += 1
                 if punished_users[msg.author.id] >= 5:
                     role = discord.utils.get(msg.server.roles, name='криминальный авторитет')
                     jail_channel = discord.utils.get(msg.server.channels, name='обезьянник')
